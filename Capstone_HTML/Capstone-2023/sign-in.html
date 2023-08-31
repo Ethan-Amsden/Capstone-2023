@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign In</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <a href="scribes-desk.html">
+			<div class="header-left">
+				<h1 class="italic">The Scribe's Desk</h1>
+				<img class="logo" src="assets/logo/logo.png">
+			</div>
+		</a>
+        <div class="header-right">
+            <div class="dropdown">
+                <button class="dropbtn button header-button">Themes</button>
+                  <form class="dropdown-content">
+                    <label class="theme-label active" for="dark">Dark</label>
+                    <input type="radio" name="theme" id="dark" >
+                    <label class="theme-label" for="light">Light</label>
+                    <input type="radio" name="theme" id="light" >
+                    <label class="theme-label" for="table-top">Table-top</label>
+                    <input type="radio" name="theme" id="table-top" >
+                  </form>
+            </div>
+            <a class="button header-button" href="sign-in.html">Log-in</a>
+        </div>
+    </header>
+	
+    <main class="center-form">
+        <form id="signInForm" class="sign-in">
+            <h2>Sign in</h2>
+            <input id="email" type="email" placeholder="Email">
+            <span class="error"></span>
+            <input id="password" type="password" placeholder="Password">
+            <span class="error"></span>
+            <p>Don't have an account? <a href="sign-up.html">Sign up!</a></p>
+            <button class="button submit-button" type="submit">Login</button>
+        </form>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

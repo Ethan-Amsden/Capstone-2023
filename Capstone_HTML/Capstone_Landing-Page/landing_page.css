@@ -1,0 +1,313 @@
+@charset "utf-8";
+
+/* Color Swatches */
+
+:root {
+    --dark-grey: #212121;
+    --green: #3B723F;
+    --white: #FFFFFF;
+    --light-grey: #858585;
+}
+
+/* CSS Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Misc */
+
+body {
+    background-color: var(--dark-grey);
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Logo Styling */
+
+.logo {
+    width: 3rem;
+    aspect-ratio: 1;
+    transform: rotate(10deg);
+	cursor: pointer;
+}
+
+/* Button Styling */
+
+button, select {
+    color: var(--light-grey);
+    font-weight: 600;
+	font-family: Candara;
+	font-size: 1.25rem;
+
+    cursor: pointer;
+
+    height: 1.875rem;
+    padding: 0 1.5rem;
+    border-radius: 25px; 
+    border: 0;
+    background-color: var(--white);
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+
+    padding: .5rem;
+    background-color: var(--light-grey);
+}
+
+
+.mainNav {
+	text-decoration: none;
+	cursor: pointer;
+
+}
+
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    gap: .5rem;
+}
+
+.header-right {
+    gap: 3rem;
+}
+
+.header-left h1 {
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/*Landing page */
+
+div.bigLogo {
+	text-align: center;
+	margin-top: 4rem;
+	height: auto;
+	width: auto;
+}
+
+.welcomeHeader {
+	text-align: center;
+	color: var(--green);
+	font-family: Ink Free;
+	font-size: 3.125rem;
+	margin-bottom: 2rem;
+}
+
+
+div.about {
+	color: var(--light-grey);
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-left: 10rem;
+	padding-right: 10rem;
+	text-align: center;
+	font-family: Candara;
+	font-size: 1.125rem;
+	text-indent: 25px;
+}
+
+div.about p {
+    margin: 0 auto;
+    padding: 0 0 0.5rem 0;
+    text-align: left;
+    width: 60%;
+}
+
+.Reviews {
+	text-align: center;
+	color: var(--green);
+	font-family: Ink Free;
+	font-size: 3.125rem;
+	margin-bottom: 2rem;
+}
+
+.Review {
+    width: 20rem;
+    
+}
+
+/****************************
+laptop format for reviews
+****************************/
+
+div.reviewPanel {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: Candara;
+    gap: 5rem;
+    text-align: center;
+    font-size: 1.125rem;
+	color: var(--light-grey);
+	margin: 0 10%;
+	align-items: center;
+}
+.Name {
+	font-style: italic;
+	margin-top: .75rem;
+}
+
+ /*end of laptop format*/
+
+
+div.writeButton {
+	text-align: center;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}
+
+.write {
+
+    color: var(--white);
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: var(--green);
+	height: 3rem;
+	width: 15rem;
+	font-family: Candara;
+}
+
+footer {
+	background-color: var(--light-grey);
+	display: flex;
+	align-items: center;
+	font-size: 1.125rem;
+	color: var(--white);
+	font-family: Candara;
+	padding-left: 1.125rem;
+	padding-top: 1.125rem;
+	padding-bottom: 1.125rem;
+}
+
+/*end of landing page*/
+
+/* Sign In Form */
+
+.center-form {
+    display: flex;
+    justify-content: center;
+}
+
+.sign-in {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+
+    text-align: center;
+
+    color: var(--white);
+    font-family: sans-serif;
+}
+
+.sign-in h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 2rem;
+}
+
+.sign-in input,
+.sign-in p {
+    margin-bottom: 1.5rem;
+}
+
+.sign-in input {
+    padding: .5rem 2rem;
+
+    font-size: 1.5rem;
+    text-align: center;
+
+    border: 0;
+    border-radius: 25px;
+}
+
+.sign-in .submit {
+    width: 50%;
+    margin: 0 auto;
+
+    color: var(--white);
+    font-size: 1rem;
+    text-transform: uppercase;
+
+    background-color: var(--green);
+}
+
+.sign-in a {
+    color: var(--white);
+}
+
+/****************************
+       Mobile format
+****************************/
+@media (max-width: 576px) {
+    
+    div.about {
+        padding: 1rem;
+    }
+
+    div.about p {
+        padding: 0 0 0.5rem 0;
+        text-align: left;
+        margin: 0;
+        width: 100%;
+    }
+
+    div.bigLogo {
+        margin: 4rem auto 0 auto;
+        height: 10rem;
+        width: 10rem;
+    }
+
+    img.bigLogo {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    div.reviewPanel {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-family: Candara;
+        gap: 3rem;
+        text-align: center;
+        font-size: 1.125rem;
+        color: var(--light-grey);
+        margin-left: 1rem;
+        margin-right: 1rem;
+        align-items: center;
+    }
+
+    footer {
+        width: 100%;
+    }
+    
+    header {
+        background-color: var(--light-grey);
+        align-items: center;
+        flex-direction: column;
+        padding: .5rem 0;
+        width: 110%;
+    }
+    
+    .Name {
+        font-style: italic;
+        margin-top: .75rem;
+    }
+}
+     /*end of mobile format*/

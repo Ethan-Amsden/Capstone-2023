@@ -1,0 +1,154 @@
+/* Color Swatches */
+
+:root {
+    --dark-grey: #212121;
+    --green: #3B723F;
+    --white: #FFFFFF;
+    --light-grey: #858585;
+}
+
+/* CSS Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Misc */
+
+body {
+    background-color: var(--dark-grey);
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Logo Styling */
+
+.logo {
+    width: 3rem;
+    aspect-ratio: 1;
+    transform: rotate(10deg);
+}
+
+/* Button Styling */
+
+button, select {
+    color: var(--light-grey);
+    font-weight: 600;
+
+    cursor: pointer;
+
+    height: 1.875rem;
+    padding: 0 1.5rem;
+    border-radius: 25px; 
+    border: 0;
+    background-color: var(--white);
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+
+    padding: .5rem;
+    background-color: var(--light-grey);
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    gap: .5rem;
+}
+
+.header-right {
+    gap: 1rem;
+}
+
+.header-left h1 {
+    color: var(--white);
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+header a {
+    text-decoration: none;
+}
+
+/* Sign In Form */
+
+.center-form {
+    display: flex;
+    justify-content: center;
+}
+
+.sign-in {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+
+    text-align: center;
+
+    color: var(--white);
+    font-family: sans-serif;
+}
+
+.sign-in h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 2rem;
+}
+
+.sign-in input,
+.sign-in p {
+    margin-bottom: 1.5rem;
+}
+
+.sign-in input {
+    padding: .5rem 2rem;
+
+    font-size: 1.5rem;
+    text-align: center;
+
+    border: 0;
+    border-radius: 25px;
+}
+
+.sign-in .submit {
+    width: 50%;
+    margin: 0 auto;
+
+    color: var(--white);
+    font-size: 1rem;
+    text-transform: uppercase;
+
+    background-color: var(--green);
+}
+
+.sign-in a {
+    color: var(--white);
+}
+
+@media only screen and (max-width: 576px) {
+
+    header {
+        align-items: center;
+        flex-direction: column;
+        padding: .5rem 0;
+        width: 110%;
+    }
+
+    .center-form {
+        display: block;
+        /*justify-content: center;*/
+        margin: 0 auto;
+    }
+}

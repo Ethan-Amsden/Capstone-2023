@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!--
+	Filename: sss_scribe_palette.html
+	Author: Ethan Amsden
+	Date: 02/17/2023
+	-->
+	<meta charset="utf-8" />
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Scribe's Palette</title>
+	<link rel="icon" href="images/Small-Logo.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="CSS/sss_texteditor.css">
+	<!--<link href="" rel="stylesheet" media="screen"/>-->
+	<!--&cross;-->
+</head>
+<body>
+	<header>
+		
+		<div id="editortitle">
+			<h1>The Scribe's Desk</h1>
+			<img src="images/Small-Logo.png">
+		</div>
+		
+		<div id="headerbtns">
+			
+			<select name="themes" id="themes">
+				<option hidden>Themes</option>
+				<option value="light">Light</option>
+				<option value="dark">Dark</option>
+				<option value="table top">Table Top</option>
+			</select>
+			
+			<button>Log-in</button>
+				
+				<!--
+				<button class="dropbtn">
+				Themes
+				<i class="fa fa-caret-down"></i>
+				</button>
+				
+				<div class="dropdown-content">
+				
+					<a href="#">Link 1</a>
+					<a href="#">Link 2</a>
+					<a href="#">Link 3</a>
+					
+				</div>
+				-->
+			
+		</div>
+	
+	</header>
+	
+	<main>
+		
+		<aside id="toolbar">
+			<ul id="toollist">
+				<li><img src="images/Bold-btn.png" class="tool" alt="Bold text button"></li>
+				<li><img src="images/Italic-btn.png" class="tool" alt="Italic text button"></li>
+				<li><img src="images/Underline-btn.png" class="tool" alt="Underline text button"></li>
+				<li><img src="images/Strikethrough-btn.png" class="tool" alt="Strike through button"></li>
+				<li><img src="images/Font-size.png" class="tool" alt="Font size button"></li>
+				<li><img src="images/Font-style.png" class="tool" alt="Font style button"></li>
+				<li><img src="images/Center-align.png" class="tool" alt="Center align button"></li>
+				<li><img src="images/Right-align.png" class="tool" alt="Right align button"></li>
+				<li><img src="images/Left-align.png" class="tool" alt="left align button"></li>
+				<li><img src="images/Open-file.png" class="tool" alt="Open file button"></li>
+				<li><img src="images/Close.png" class="tool" id="closebtn"alt="Close button"></li>
+			</ul>
+		</aside>
+		
+		<section id="workspace">
+			<!--
+			&cross;
+			attr: contenteditable
+			https://www.youtube.com/watch?v=BePArgUjkss
+			-->
+			
+			<div id="manuscript" contenteditable="true"></div>
+			
+			<div id="counters">
+			
+				<p class="progress" id="wc">Word Count: <span></span></p>
+				<p class="progress" id="cc">Character Count: <span></span></p>
+				
+			</div>
+			
+			<button id="saveprogress">Save Progress</button>
+			
+			<footer id="editorfooter">
+				<p>&#169; Scribe's Desk 2023</p>
+				<p id="save-rec">Last saved:<span id="saved-date"></span></p>
+			</footer>
+			
+		</section>
+		
+	</main>
+	
+</body>
+</html>

@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
+
+/* Color Swatches */
+
+:root {
+    --bg-color: hsl(0, 0%, 13%);
+    --header-color: hsl(0, 0%, 52%);
+
+    --text-color: 0, 0%, 100%;
+
+    --green: hsl(124, 32%, 34%);
+    --transparent: 0, 0%, 0%;
+    /* #988d7c */
+    /* #f1dcbb */
+}
+
+/* CSS Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Misc */
+
+body {
+    background-color: var(--bg-color);
+
+    background-image: var(--table-top-image);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Logo Styling */
+
+.logo {
+    width: 3rem;
+    aspect-ratio: 1;
+    transform: rotate(10deg);
+}
+
+/* Submit Button, Links & Select Styling */
+
+.button {
+    font-family: sans-serif;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    
+    border-radius: 25px; 
+    border: 0;
+    text-decoration: none;
+}
+
+.header-button {
+    font-size: 1rem;
+    color: var(--header-color);
+    background-color: var(--bg-color);
+}
+
+.submit-button {
+    margin: 0 auto;
+    transition: 250ms ease-out;
+}
+
+.submit-button,
+.cta-button {
+    width: fit-content;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+    color: var(--bg-color);
+    background-color: var(--green);
+}
+
+.cta-button {
+    margin-top: 5rem;
+}
+
+.submit-button:hover {
+    background-color: var(--header-color);
+	color: var(--bg-color);
+}
+
+/* Theme Switcher Styling */
+
+.dropbtn {
+    color: var(--header-color);
+    border: none;
+    position: relative;
+    width: 8rem;
+    transition: 250ms;
+}
+
+.dropdown:hover .dropbtn {
+    border-radius: 10px 10px 0 0;
+}
+
+.dropdown-content {
+    font-family: sans-serif;
+    display: none;
+    background-color: var(--bg-color);
+    position: absolute;
+    width: 8rem;
+    font-size: 1rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+.dropdown-content .theme-label {
+    position: relative;
+    color: var(--header-color);
+    font-weight: 600;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    transition: 250ms ease;
+}
+
+.dropdown-content label:last-of-type {
+    border-radius: 0 0 10px 10px;
+}
+
+.dropdown-content .active,
+.dropdown:hover .dropdown-content label:hover {
+    color: var(--bg-color);
+    background-color: var(--header-color);
+} 
+
+.dropdown-content input {
+    position: absolute;
+    appearance: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Setting the Themes */
+
+:root:has(#light:checked) {
+    --bg-color: hsl(0, 0%, 93%);
+    --header-color: hsl(135, 25%, 60%);
+
+    --text-color: 0, 0%, 15%;
+}
+
+:root:has(#table-top:checked) {
+    --table-top-image: url("view/assets/images/table-top-theme/table-top.jpg");
+
+    --bg-color: hsl(0, 0%, 95%);
+    --header-color: hsl(31, 25%, 70%);
+
+    --text-color: 0, 0%, 10%;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+
+    width: 100%;
+
+    padding: .5rem 1rem;
+    background-color: var(--header-color);
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    gap: .5rem;
+}
+
+.header-right {
+    gap: 1rem;
+}
+
+.header-left h1 {
+    color: hsl(var(--text-color));
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+header a {
+    text-decoration: none;
+}
+
+/* Landing Page */
+
+article {
+    padding: 5rem 0;
+}
+
+.welcomeHeader {
+	text-align: center;
+	color: var(--green);
+	font-family: "Ink Free", "Mynerve";
+	font-size: 3.125rem;
+	margin-bottom: 2rem;
+}
+
+.about {
+	color: hsl(var(--text-color), .8);
+    margin: 2rem 0;
+	padding-inline: 5rem;
+	text-align: center;
+	font-family: "Candara";
+	font-size: 1.125rem;
+	text-indent: 25px;
+    background-color: hsl(var());
+}
+
+.about p {
+    margin: 0 auto;
+    padding: 0 0 0.5rem 0;
+    text-align: left;
+    width: 60%;
+}
+
+.reviews {
+	text-align: center;
+	color: var(--green);
+	font-family: Ink Free;
+	font-size: 3.125rem;
+	margin-bottom: 2rem;
+}
+
+.review {
+    width: 20rem;
+    height: 25rem;
+}
+
+.reviewPanel {
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+
+    font-family: Candara;
+    text-align: center;
+    font-size: 1.125rem;
+	color: hsl(var(--text-color), .8);
+}
+
+.name {
+	font-style: italic;
+	margin-top: .75rem;
+}
+
+footer {
+	background-color: var(--header-color);
+	display: flex;
+	align-items: center;
+	font-size: 1.125rem;
+	color: hsl(var(--text-color));
+	font-family: Candara;
+    padding: 1.125rem;
+}
+
+@media (max-width: 1000px) {
+    .about {
+        padding: 1rem;
+    }
+
+    .about p {
+        width: 100%;
+        text-align: left;
+        margin: 0;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .bigLogo {
+        
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .reviewPanel {
+        flex-direction: column;
+    }
+    
+    header {
+        align-items: center;
+        flex-direction: column;
+        padding: .5rem 0;
+    }
+    
+    .name {
+        font-style: italic;
+        margin-top: .75rem;
+    }
+}
+
+/* end of landing page */
+
+/* Sign In Form */
+
+.center-form {
+    display: flex;
+    justify-content: center;
+}
+
+.sign-in {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+
+    text-align: center;
+
+    color: hsl(var(--text-color), .8);
+    font-family: sans-serif;
+}
+
+.sign-in h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    padding-bottom: 2rem;
+}
+
+.sign-in p {
+    margin-top: 1rem;
+}
+
+.sign-in input {
+    padding: .5rem 2rem;
+
+    font-size: 1.5rem;
+    text-align: center;
+
+    border: 0;
+    border-radius: 25px;
+    
+    transition: 500ms ease-out;
+}
+
+.sign-in input:focus {
+    outline: 3px solid var(--green);
+}
+
+.sign-in a {
+    color: hsl(var(--text-color), .8);
+}
+
+.sign-in .submit-button {
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.error {
+    font-family: sans-serif;
+    color: hsl(0, 100%, 63%);
+    padding: .5rem 0 1rem;
+    text-align: left;
+}
+
+/* end of sign in/up page */
+
+/* Editor Page Styles */
+
+.workspace {
+	display: flex;
+}
+
+
+aside {
+	display: flex;
+	align-items: center;
+	background-color: var(--header-color);
+	padding: 1rem;
+    height: 588px;
+}
+
+#toollist {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	
+	gap: 1rem;
+	margin: 0;
+	padding: 0;
+	width: 2rem;
+}
+
+#toollist button {
+	background: transparent;
+}
+
+#toollist img {
+	height: 2rem;
+	width: rem;
+	padding: 0.2rem;
+	border-radius: 5px;
+	transition: 250ms;
+}
+
+#toollist img:hover {
+	background-color: #3B723F;
+}
+
+ul li img#closebtn:hover {
+	background-color: #AD0000;
+}
+
+#project_editor_form {
+    width: 100%;
+}
+
+#manuscript {
+	min-height: 588px;
+	width: 100%;
+	
+	font-family: Candara;
+	font-size: 2rem;
+	
+	padding: 1rem;
+	resize: vertical;
+	
+	color: hsl(var(--text-color), .8);
+	border: 3px solid hsl(var(--text-color));
+	background-color: transparent;
+}
+
+#manuscript:focus {
+	outline: 0;
+}
+
+#project_editor_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#db-manuscript {
+    display: none;
+}
+
+option {
+	text-align: center;
+}
+
+.progress-container {
+	display: flex;
+	justify-content: space-around;
+    align-items: center;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	padding-inline: 4rem;
+}
+
+#counters {
+    flex: 1;
+
+	display: flex;
+    gap: 3rem;
+
+    width: fit-content;
+
+	color: hsl(var(--text-color), .8);
+}
+
+.progress {
+	margin: 0;
+}
+
+@media (max-width: 660px) {
+	#manuscript {
+		font-size: 1rem;
+	}
+    
+    .progress-container {
+        padding-inline: 1rem;
+    }
+
+    #counters {
+        gap: 2rem;
+    }
+}
+
+/* Account page */
+
+.account-container {
+    display: grid;
+    place-items: center;
+
+    min-height: 100vh;
+    text-align: center;
+    color: hsl(var(--text-color));
+}
+
+.account-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30%;
+}
+
+.account-info-details p {
+    font-size: 1.5rem;
+}
+
+.account-info-details {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+table {
+	width: 100%;
+    height: 100%;
+    margin-block: 3rem;
+}
+
+tr {
+    display: flex;
+	justify-content: space-between;
+	gap: 5rem;
+    padding: .5rem;
+    border-bottom: 1px solid var(--header-color);
+}
+
+tr:nth-child(even) {
+    background-color: hsl(0, 0%, 85%, .8);
+}
+
+td {
+    width: fit-content;
+}
+
+.project-actions {
+    display: inline-block;
+}
+
+.delete {
+    width: 1.5rem;
+    aspect-ratio: 1;
+
+    color: red;
+    background-color: transparent;
+    font-family: sans-serif;
+    font-weight: bold;
+    
+    padding: .125rem;
+    border: 0;
+    border-radius: 50%;
+    transition: 250ms ease-in-out;
+}
+
+.delete:hover {
+    color: white;
+    background-color: red;
+}
+
+#add_project_form {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-block: 2rem;
+    padding: .5rem;
+}
+
+

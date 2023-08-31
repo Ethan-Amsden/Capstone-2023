@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign In</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+    <link rel="stylesheet" href="sign_in_up.css">
+</head>
+<body>
+
+    <header>
+        <a href="Scribes-Desk.html">
+			<div class="header-left">
+				<h1 class="italic">The Scribe's Desk</h1>
+				<img class="logo" src="assets/logo/logo.png">
+			</div>
+		</a>
+        <div class="header-right">
+            <select name="themes" id="themes">
+				<option hidden>Themes</option>
+				<option value="light">Light</option>
+				<option value="dark">Dark</option>
+				<option value="table top">Table Top</option>
+			</select>
+            <a href="sign-in.html"><button>Log-in</button></a>
+        </div>
+    </header>
+	
+    <main class="center-form">
+        <form class="sign-in">
+            <h2>Sign in</h2>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <p>Don't have an account? <a href="sign-up.html">Sign up!</a></p>
+            <button class="submit" type="submit">Login</button>
+        </form>
+    </main>
+	
+</body>
+</html>
